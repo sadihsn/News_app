@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>News App</h1>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for news...">
+            <button onclick="fetchNews()">Search</button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <select id="countryFilter">
+                <option value="">Select Country</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <!-- Add more countries here -->
+            </select>
+
+            <select id="categoryFilter">
+                <option value="">Select Category</option>
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+            </select>
+        </div>
+
+        <!-- News List -->
+        <div id="newsList" class="news-list">
+            <!-- News articles will be injected here -->
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination">
+            <button id="prevBtn" onclick="changePage(-1)">Previous</button>
+            <button id="nextBtn" onclick="changePage(1)">Next</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
